@@ -24,7 +24,7 @@ The .RBF files are stored in the Config.msi folder on the disk where the program
 
 ## How exploit work?
 
-Race condition in Windows Installer, which is exploited by creating OpLock for the directory "c:\\config.msi"  with callbackfunction and then create a  mountpoint (called as Juctions) before it writes DACL. It will provide us a small timing windows to trigger the rollback (.rbs and .rbf) action by clicking cancel button and  it will perform the rollback operation by writing the oops.dll to "c:\\windows\system32\" .  
+Race condition in Windows Installer, which is exploited by creating OpLock for the directory "c:\\config.msi"  with callbackfunction and then create a  mountpoint (called as junctions or reparse points) before it writes DACL. It will provide us a small timing windows to trigger the rollback (.rbs and .rbf) action by clicking cancel button and  it will perform the rollback operation by writing the oops.dll to "c:\\windows\system32\" .  
 
 Interesting thing is, this could  be used with malware and  programmatically trigger the rollback action to exploit it.  Maybe you can even pass the silent flag "/qn" to hide installer UI and find another way to trigger rollback (i.e through installer api, injecting into medium Integrity Level(IL) msiexec etc)
 
