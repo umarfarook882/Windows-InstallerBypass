@@ -1,4 +1,4 @@
-### Windows Installer Bypass using Rollback Script (RBS and RBF)
+### Windows Installer Bypass using Rollback Script (RBS and RBF) - Race Condition
 
 
 Thanks to @SandboxEscaper for releasing this exploit code on Gtihub, it's very interesting to analyze :)
